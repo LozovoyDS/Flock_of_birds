@@ -83,7 +83,7 @@ public class Bird : MonoBehaviour
         }
 
         if (birds.Length > maxBirds) cohesion /= maxBirds; else cohesion /= birds.Length;
-        //cohesion /= birds.Length;
+
         cohesion -= transform.position; // точка центра между текущей и соседними птицами
         cohesion = Vector3.ClampMagnitude(cohesion, maxSpeed);
 
